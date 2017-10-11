@@ -32,9 +32,9 @@ class RequestManager {
     
     // MARK: - Public Methods
     
-    func perform<T: Decodable>(request: RequestData) -> Observable<T> {
+    func perform<T: Decodable>(request: RequestData, appId: String = "", appSecret: String = "") -> Observable<T> {
         return Observable<T>.create { subscriber -> Disposable in
-            let dataRequest = self.configureRequest(by: request)
+            let dataRequest = self.configureRequest(by: request, appId: appId, appSecret: appSecret)
             
             // Debuging
             print("REQUEST: ", dataRequest.debugDescription, "\n")
@@ -66,9 +66,9 @@ class RequestManager {
         }
     }
     
-    func perform(imageRequest: RequestData) -> Observable<Image> {
+    func perform(imageRequest: RequestData, appId: String = "", appSecret: String = "") -> Observable<Image> {
         return Observable<Image>.create { subscriber -> Disposable in
-            let dataRequest = self.configureRequest(by: imageRequest)
+            let dataRequest = self.configureRequest(by: imageRequest, appId: appId, appSecret: appSecret)
             
             // Debuging
             print("REQUEST: ", dataRequest.debugDescription, "\n")
@@ -92,18 +92,15 @@ class RequestManager {
     
     // MARK: - Service Methods
     
-    private func configureRequest(by request: RequestData) -> DataRequest {
+    private func configureRequest(by request: RequestData, appId: String, appSecret: String) -> DataRequest {
         let encoding: ParameterEncoding = request.method == .get ? URLEncoding.default : JSONEncoding.default
         let resultRequest = sessionManager.request(request.endPoint,
                                       method: request.method,
                                       parameters: request.parameters,
                                       encoding: encoding,
                                       headers: request.headers)
-        
-        // TODO: Implement authentication.
-        // resultRequest.authenticate(user: ServerConstants.applicationId, password: ServerConstants.applicationSecret)
-        //
-        
+
+        resultRequest.authenticate(user: appId, password: appSecret)
         return resultRequest
     }
 }

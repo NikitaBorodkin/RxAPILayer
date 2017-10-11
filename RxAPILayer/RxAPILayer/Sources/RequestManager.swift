@@ -12,7 +12,7 @@ import AlamofireImage
 
 import Foundation
 
-class RequestManager {
+open class RequestManager {
     
     // MARK: - Private Properties
 
@@ -20,19 +20,19 @@ class RequestManager {
     
     // MARK: - Lifecycle
     
-    init(with configuration: APIClientConfiguration) {
+    public init(with configuration: APIClientConfiguration) {
         reconfigure(with: configuration)
     }
     
     // MARK: - Service Methods
     
-    func reconfigure(with configuration: APIClientConfiguration) {
+    public func reconfigure(with configuration: APIClientConfiguration) {
         self.sessionManager = Alamofire.SessionManager(configuration: configuration.sessionType)
     }
     
     // MARK: - Public Methods
     
-    func perform<T: Decodable>(request: RequestData, appId: String = "", appSecret: String = "") -> Observable<T> {
+    public func perform<T: Decodable>(request: RequestData, appId: String = "", appSecret: String = "") -> Observable<T> {
         return Observable<T>.create { subscriber -> Disposable in
             let dataRequest = self.configureRequest(by: request, appId: appId, appSecret: appSecret)
             
@@ -66,7 +66,7 @@ class RequestManager {
         }
     }
     
-    func perform(imageRequest: RequestData, appId: String = "", appSecret: String = "") -> Observable<Image> {
+    public func perform(imageRequest: RequestData, appId: String = "", appSecret: String = "") -> Observable<Image> {
         return Observable<Image>.create { subscriber -> Disposable in
             let dataRequest = self.configureRequest(by: imageRequest, appId: appId, appSecret: appSecret)
             

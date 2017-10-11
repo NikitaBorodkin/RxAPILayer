@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "RxAPILayer"
-s.version      = "1.0.1"
+s.version      = "1.0.3"
 s.summary      = "RxSwift-based network layer."
 
 # This description is used to generate tags and improve search results.
@@ -129,9 +129,9 @@ s.requires_arc = true
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-s.dependency "RxCocoa", "~> 4.0.0-rc.0"
 s.dependency "Alamofire", "~> 4.5"
 s.dependency "AlamofireImage", "~> 3.3"
-s.dependency "RxSwift", "~> 4.0.0-alpha.1"
+s.dependency "RxCocoa", "~> 4.0.0-rc.0"
+s.dependency "RxSwift", "~> 4.0.0-rc.0"
 
 end

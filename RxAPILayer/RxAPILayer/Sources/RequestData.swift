@@ -9,13 +9,13 @@
 import Alamofire
 import Foundation
 
-struct RequestData {
-    var endPoint: String
-    var parameters: [String : Any]
-    var headers: [String : String]
-    var method: Alamofire.HTTPMethod
+public struct RequestData {
+    public var endPoint: String
+    public var parameters: [String : Any]
+    public var headers: [String : String]
+    public var method: Alamofire.HTTPMethod
     
-    init(endPoint: String, parameters: [String : Any] = [:], headers: [String : String] = [:], method: Alamofire.HTTPMethod) {
+    public init(endPoint: String, parameters: [String : Any] = [:], headers: [String : String] = [:], method: Alamofire.HTTPMethod) {
         self.method = method
         self.endPoint = endPoint
         self.headers = headers

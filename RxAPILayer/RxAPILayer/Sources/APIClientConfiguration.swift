@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct APIClientConfiguration {
-    var timeout: Double = 15
-    var sessionType: URLSessionConfiguration = URLSessionConfiguration.default
-    var defaultHeaders: [String : String] = [:]
+public struct APIClientConfiguration {
+    public var timeout: Double = 15
+    public var sessionType: URLSessionConfiguration = URLSessionConfiguration.default
+    public var defaultHeaders: [String : String] = [:]
     
-    static func defaultConfiguration() -> APIClientConfiguration {
+    public static func defaultConfiguration() -> APIClientConfiguration {
         let configuration = APIClientConfiguration()
         configuration.sessionType.timeoutIntervalForRequest = configuration.timeout
         return configuration

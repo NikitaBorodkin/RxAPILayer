@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01049D861F949A9200A7934F /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01049D851F949A9200A7934F /* BaseAPIClient.swift */; };
 		01E02C591F8D565600D3AC2D /* RxAPILayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E02C571F8D565600D3AC2D /* RxAPILayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01E02C631F8D567B00D3AC2D /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E02C601F8D567B00D3AC2D /* RequestData.swift */; };
 		01E02C641F8D567B00D3AC2D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E02C611F8D567B00D3AC2D /* RequestManager.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01049D851F949A9200A7934F /* BaseAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
 		01E02C541F8D565600D3AC2D /* RxAPILayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAPILayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E02C571F8D565600D3AC2D /* RxAPILayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxAPILayer.h; sourceTree = "<group>"; };
 		01E02C581F8D565600D3AC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				01E02C601F8D567B00D3AC2D /* RequestData.swift */,
+				01049D851F949A9200A7934F /* BaseAPIClient.swift */,
 				01E02C611F8D567B00D3AC2D /* RequestManager.swift */,
 				01E02C621F8D567B00D3AC2D /* APIClientConfiguration.swift */,
 			);
@@ -151,6 +154,7 @@
 			files = (
 				01E02C631F8D567B00D3AC2D /* RequestData.swift in Sources */,
 				01E02C651F8D567B00D3AC2D /* APIClientConfiguration.swift in Sources */,
+				01049D861F949A9200A7934F /* BaseAPIClient.swift in Sources */,
 				01E02C641F8D567B00D3AC2D /* RequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

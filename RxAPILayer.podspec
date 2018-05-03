@@ -51,10 +51,10 @@ s.license      = { :type => "MIT", :file => "LICENSE" }
 #  profile URL.
 #
 
-s.author             = { "Nikita Borodkin" => "nikita.borodkin@noveogroup.com" }
+s.author             = { "Nikita Borodkin" => "nikita.borodkeen@gmail.com" }
 # Or just: s.author    = "Nikita Borodkin"
-# s.authors            = { "Nikita Borodkin" => "nikita.borodkin@noveogroup.com" }
-# s.social_media_url   = "http://twitter.com/Nikita Borodkin"
+# s.authors            = { "Nikita Borodkin" => "nikita.borodkeen@gmail.com" }
+# s.social_media_url   = "http://twitter.com/Nikita_Borodkin"
 
 # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 #
@@ -62,11 +62,11 @@ s.author             = { "Nikita Borodkin" => "nikita.borodkin@noveogroup.com" }
 #  the deployment target. You can optionally include the target after the platform.
 #
 
-s.platform     = :ios, "11.0"
+#s.platform     = :ios, "11.0"
 
 #  When using multiple platforms
-# s.ios.deployment_target = "5.0"
-# s.osx.deployment_target = "10.7"
+ 	s.ios.deployment_target = "11.0"
+ 	s.osx.deployment_target = "10.13"
 # s.watchos.deployment_target = "2.0"
 # s.tvos.deployment_target = "9.0"
 
